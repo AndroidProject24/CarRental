@@ -8,43 +8,47 @@ import {
   TouchableOpacity,
   Navigator
 } from 'react-native';
-
+import { Ionicons } from '@expo/vector-icons';
 import {RkButton,RkText, RkTheme, RkStyleSheet} from 'react-native-ui-kitten';
 
-const { width, height } = Dimensions.get('window');
 const paddingValue = 8;
-const equalWidth =  (width - paddingValue * 6) / 2;
+
 let data = [
   {
   id:'1',
   title: 'News',
-  icon: 'icon',
+     icon: 'ios-help-circle-outline',
+  //icon: "newspaper-o",
   route: 'News',
 },
 {
   id:'2',
   title: 'Garage',
-   icon: 'icon',
+     icon: 'ios-help-circle-outline',
+   //icon: "account",
   route: 'Garage'
 },
 {
   id:'3',
   title: 'HistoryList',
-   icon: 'icon',
+     icon: 'ios-help-circle-outline',
+   //icon: "history",
   route: 'HistoryList'
 },
 {
   id:'4',
   title: 'Qrcode',
-   icon: 'icon',
+     icon: 'ios-help-circle-outline',
+   //icon: "qrcode",
   route: 'Qrcode'
 },
 {
   id:'5',
   title: 'Help',
-   icon: 'icon',
+   icon: 'ios-help-circle-outline',
   route: 'Help'
 }]
+
 export class ComponentsScreen extends React.Component {
   constructor(props) {
    super(props)
@@ -54,46 +58,62 @@ export class ComponentsScreen extends React.Component {
    title: 'Card Rental'
  };
 
+ _calculateItemSize() {
+   let {height, width} = Dimensions.get('window');
+   return (width - paddingValue * 6) / 2;
+ }
+
  componentWillMount() {
     this.setState({ data: data });
   }
 
-   renderRowItem = (itemData) => {
-       return (
-         <RkButton rkType='square shadow'
-         style={{width: equalWidth, height: equalWidth}}
-         onPress={() => this.selectComponent(itemData)}>
-         <RkText style={styles.icon} rkType='primary moon menuIcon' rkType='bold'>{itemData.icon}</RkText>
-         <RkText >{itemData.title}</RkText>
-         </RkButton>
-       )
-     }
-     selectComponent(itemData) {
-       const {navigate} = this.props.navigation;
-       navigate(itemData.route);
-     }
-     render () {
-       return (
-           <View style={styles.root} contentContainerStyle={styles.rootContainer}>
-           <FlatList
-             data={this.state.data}
-             numColumns={2}
-             renderItem={({item, index}) => this.renderRowItem(item)}
-             keyExtractor={(item, index) => item.id}/>
-           </View>
-        );
-     }
-   }
+  renderRowItem = (itemData) => {
+    let size=this._calculateItemSize();
+      return (
+        <RkButton rkType='square shadow' style={{width: size,height: size,backgroundColor: '#ffffff', marginLeft:paddingValue, marginBottom: paddingValue
+         , flexDirection: 'column',justifyContent: 'space-between', alignItems: 'center'}}
+        onPress={() => this.selectComponent(itemData)}>
+        <Ionicons name={itemData.icon} size={80} style={styles.icon}/>
+        <RkText style={styles.text}>{itemData.title}</RkText>
+        </RkButton>
+      )
+    }
+    selectComponent(itemData) {
+      const {navigate} = this.props.navigation;
+      navigate(itemData.route);
+    }
+    render () {
+      return (
+          <View style={styles.root} contentContainerStyle={styles.rootContainer}>
+          <FlatList
+            data={this.state.data}
+            numColumns={2}
+            renderItem={({item, index}) => this.renderRowItem(item)}
+            keyExtractor={(item, index) => item.id}/>
+          </View>
+       );
+    }
+  }
 let styles = RkStyleSheet.create(theme => ({
+  //console.log('renderRowItem'+size);
   root: {
     backgroundColor: theme.colors.screen.scroll,
     padding: paddingValue
   },
   rootContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap'
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  dot: {
+    fontSize: 6.5,
+    marginLeft: 4,
+    marginVertical: 6,
+    color: theme.colors.text.inverse
   },
   icon: {
+    marginBottom: 16
+  },
+  text: {
     marginBottom: 16
   }
 }));

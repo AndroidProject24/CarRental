@@ -64,13 +64,6 @@ const Colors = {
 
 };
 
-const Fonts = {
-  light: 'Roboto-Light',
-  regular: 'Roboto-Regular',
-  bold: 'Roboto-Medium',
-  logo: 'Righteous-Regular',
-};
-
 const FontBaseValue = scale(18);
 
 export const KittenTheme = {
@@ -180,7 +173,7 @@ export const KittenTheme = {
       big: 24
     },
     family: {
-      regular: 'robotoLight',
+      regular: 'robotoRegular',
       light: 'robotoLight',
       bold: 'robotoMed',
       logo: 'robotoMed'
