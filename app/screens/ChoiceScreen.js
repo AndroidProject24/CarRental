@@ -12,7 +12,7 @@ import {
   RkTheme,
   RkSeparator
 } from 'react-native-ui-kitten';
-import {UtilStyles} from '../style/styles';
+import {UtilStyles} from '../style/theme';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 

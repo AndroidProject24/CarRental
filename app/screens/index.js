@@ -4,6 +4,7 @@ export * from './GarageScreen'
 export * from './QrcodeScreen'
 export * from './HelpScreen'
 
+//TEST
 export * from './AvatarScreen'
 export * from './ButtonScreen'
 export * from './CardScreen'

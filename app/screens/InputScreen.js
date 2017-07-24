@@ -10,7 +10,7 @@ import {
 
 import {RkText, RkTextInput, RkTheme} from 'react-native-ui-kitten';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {UtilStyles} from '../style/styles';
+import {UtilStyles} from '../style/theme';
 
 export class InputScreen extends Component {
   static navigationOptions = {

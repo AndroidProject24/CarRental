@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import {
-  StyleSheet,
   FlatList,
   View,
   Dimensions,
@@ -64,8 +63,8 @@ export class ComponentsScreen extends React.Component {
          <RkButton rkType='square shadow'
          style={{width: equalWidth, height: equalWidth}}
          onPress={() => this.selectComponent(itemData)}>
-         <RkButton style={styles.icon} rkType='primary moon menuIcon'>{itemData.icon}</RkButton>
-         <RkText rkType='bold'>{itemData.title}</RkText>
+         <RkText style={styles.icon} rkType='primary moon menuIcon' rkType='bold'>{itemData.icon}</RkText>
+         <RkText >{itemData.title}</RkText>
          </RkButton>
        )
      }
@@ -75,27 +74,24 @@ export class ComponentsScreen extends React.Component {
      }
      render () {
        return (
-           <View style={styles.rootContainer}>
+           <View style={styles.root} contentContainerStyle={styles.rootContainer}>
            <FlatList
              data={this.state.data}
              numColumns={2}
              renderItem={({item, index}) => this.renderRowItem(item)}
              keyExtractor={(item, index) => item.id}/>
            </View>
-
         );
      }
    }
 let styles = RkStyleSheet.create(theme => ({
-  rootContainer: {
-     flexDirection: 'row',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
-  },
   root: {
     backgroundColor: theme.colors.screen.scroll,
-    padding: paddingValue,
+    padding: paddingValue
+  },
+  rootContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   },
   icon: {
     marginBottom: 16

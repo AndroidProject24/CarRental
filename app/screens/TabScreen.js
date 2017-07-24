@@ -13,7 +13,7 @@ import {
 
 import {RkText, RkTheme, RkTabView} from 'react-native-ui-kitten';
 
-import {UtilStyles} from '../style/styles';
+import {UtilStyles} from '../style/theme';
 import {ImageIcon} from '../components/imageIcon'
 import Icon from 'react-native-vector-icons/FontAwesome';
 

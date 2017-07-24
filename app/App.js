@@ -2,14 +2,14 @@ import React from 'react';
 import Expo from 'expo';
 import * as Screens from './screens';
 import {StackNavigator} from 'react-navigation';
-import {bootstrap} from './style/themeBootstrapper'
+import {bootstrap} from './style/themeBootstrap';
 
 class ComponentsScreen extends React.Component {
   state = {
     loaded: false,
   }
 
-  async componentDidMount() {
+async componentDidMount() {
     await Expo.Font.loadAsync({
       'robotoLight': require('./assets/fonts/Roboto-Light.ttf'),
       'robotoRegular': require('./assets/fonts/Roboto-Regular.ttf'),
@@ -20,7 +20,7 @@ class ComponentsScreen extends React.Component {
   }
 }
 
- const CarRental = StackNavigator({
+const CarRental = StackNavigator({
    Home: {screen: Screens.ComponentsScreen},
    News: {screen: Screens.NewsScreen},
    HistoryList: {screen: Screens.HistoryListScreen},
@@ -28,6 +28,7 @@ class ComponentsScreen extends React.Component {
    Qrcode: {screen: Screens.QrcodeScreen},
    Help: {screen: Screens.HelpScreen},
 
+  //TEST
    Button: {screen: Screens.ButtonScreen},
    Choice: {screen: Screens.ChoiceScreen},
    Tab: {screen: Screens.TabScreen},
@@ -42,6 +43,6 @@ class ComponentsScreen extends React.Component {
        backgroundColor: 'white'
      }
    }
- });
+});
 
 Expo.registerRootComponent(CarRental);

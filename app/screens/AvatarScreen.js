@@ -3,7 +3,7 @@ import {StyleSheet, ScrollView, TextInput, TouchableOpacity, View, Image, Text} 
 import {RkText, RkTheme} from 'react-native-ui-kitten'
 import {Avatar} from '../components/avatar'
 
-import {UtilStyles} from '../style/styles';
+import {UtilStyles} from '../style/theme';
 
 export class AvatarScreen extends Component {
   static navigationOptions = {

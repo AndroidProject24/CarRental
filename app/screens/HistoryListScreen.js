@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet
 } from 'react-native';
-import {UtilStyles} from '../style/styles';
+import {UtilStyles} from '../style/theme';
 import {
   RkText,
   RkChoiceGroup,
