@@ -1,0 +1,21 @@
+{
+  "name": "CarRental",
+  "version": "1.0.0",
+  "description": "Hello Expo!",
+  "author": "Toan",
+  "private": true,
+  "main": "app/App.js",
+  "dependencies": {
+    "expo": "^19.0.0",
+    "react": "16.0.0-alpha.12",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-19.0.0.tar.gz",
+    "prop-types": "^15.5.10",
+    "react-navigation": "^1.0.0-beta.11",
+    "babel-jest": "20.0.3",
+		"babel-preset-react-native": "2.1.0",
+		"jest": "20.0.4",
+		"react-native-ui-kitten": "2.0.1",
+		"react-native-vector-icons": "^2.1.0",
+		"react-test-renderer": "16.0.0-alpha.12"
+  }
+}
