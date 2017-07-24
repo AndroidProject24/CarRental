@@ -1,11 +1,10 @@
 import {RkTheme} from 'react-native-ui-kitten';
 import {AvatarTypes} from '../components/avatarTypes';
-import {KittenTheme} from '../theme/theme';
 let robotoLight = 'robotoLight';
 let robotoMed = 'robotoMed';
 
 export let bootstrap = () => {
-  RkTheme.setTheme(KittenTheme, null);
+  //RkTheme.setTheme(KittenTheme, null);
   RkTheme.registerComponent('Avatar', AvatarTypes);
   RkTheme.setColor('accent', '#ed1c4d');
 
