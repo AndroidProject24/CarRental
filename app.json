@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "carrental",
+    "name": "Bikes",
     "description": "An empty new project",
-    "slug": "carrental",
+    "slug": "Bikes",
     "privacy": "public",
     "sdkVersion": "19.0.0",
     "version": "1.0.0",

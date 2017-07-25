@@ -1,8 +1,8 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 2637,
-  "expoServerNgrokUrl": "https://nf-kss.huynhvantoan.carrental.exp.direct",
-  "packagerNgrokUrl": "https://packager.nf-kss.huynhvantoan.carrental.exp.direct",
-  "ngrokPid": 2660
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }

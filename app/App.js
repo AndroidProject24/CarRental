@@ -20,23 +20,16 @@ async componentDidMount() {
   }
 }
 
-const CarRental = StackNavigator({
+const Bikes = StackNavigator({
+   Login: {screen: Screens.LoginScreen},
+   SignUp: {screen: Screens.SignUpScreen},
+   PasswordRecovery: {screen: Screens.PasswordRecoveryScreen},
    Home: {screen: Screens.ComponentsScreen},
    News: {screen: Screens.NewsScreen},
    HistoryList: {screen: Screens.HistoryListScreen},
    Garage: {screen: Screens.GarageScreen},
    Qrcode: {screen: Screens.QrcodeScreen},
-   Help: {screen: Screens.HelpScreen},
-
-  //TEST
-   Button: {screen: Screens.ButtonScreen},
-   Choice: {screen: Screens.ChoiceScreen},
-   Tab: {screen: Screens.TabScreen},
-   Card: {screen: Screens.CardScreen},
-   Avatar: {screen: Screens.AvatarScreen},
-   Input: {screen: Screens.InputScreen},
-   Image: {screen: Screens.ImageScreen},
-   Settings: {screen: Screens.SettingsScreen}
+   Help: {screen: Screens.HelpScreen}
  }, {
    navigationOptions: {
      headerStyle: {
@@ -45,4 +38,4 @@ const CarRental = StackNavigator({
    }
 });
 
-Expo.registerRootComponent(CarRental);
+Expo.registerRootComponent(Bikes);

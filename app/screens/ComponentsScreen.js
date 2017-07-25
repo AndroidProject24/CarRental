@@ -18,28 +18,28 @@ let data = [
   id:'1',
   title: 'News',
      icon: 'ios-help-circle-outline',
-  //icon: "newspaper-o",
+//  icon: 'newspaper-o',
   route: 'News',
 },
 {
   id:'2',
   title: 'Garage',
      icon: 'ios-help-circle-outline',
-   //icon: "account",
+  // icon: 'account',
   route: 'Garage'
 },
 {
   id:'3',
   title: 'HistoryList',
      icon: 'ios-help-circle-outline',
-   //icon: "history",
+   //icon: 'history',
   route: 'HistoryList'
 },
 {
   id:'4',
   title: 'Qrcode',
      icon: 'ios-help-circle-outline',
-   //icon: "qrcode",
+  //icon: 'qrcode',
   route: 'Qrcode'
 },
 {
