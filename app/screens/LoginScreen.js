@@ -44,7 +44,7 @@ export class LoginScreen extends React.Component {
             <RkTextInput rkType='rounded' placeholder='Username'/>
             <RkTextInput rkType='rounded' placeholder='Password' secureTextEntry={true}/>
             <LinearGradient
-                      colors={['#4c669f', '#3b5998', '#192f6a']}
+                      colors={['#ff9147', '#f24645', '#ff524c']}
                       style={{ padding: 15, alignItems: 'center', borderRadius: 5 }}
                       onPress={() =>
                         this.props.navigation.navigate('Home')
@@ -75,9 +75,7 @@ export class LoginScreen extends React.Component {
     )
   }
 }
-// <GradientButton style={styles.save} rkType='large' text='LOGIN' onPress={() =>
-//   this.props.navigation.navigate('Home')
-// }/>
+
 let styles = RkStyleSheet.create(theme => ({
   screen: {
     padding: scaleVertical(16),

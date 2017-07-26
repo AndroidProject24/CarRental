@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   Navigator
 } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 import {RkButton,RkText, RkTheme, RkStyleSheet} from 'react-native-ui-kitten';
 
 const paddingValue = 8;
@@ -17,35 +17,31 @@ let data = [
   {
   id:'1',
   title: 'News',
-     icon: 'ios-help-circle-outline',
-//  icon: 'newspaper-o',
+  icon: 'newspaper-o',
   route: 'News',
 },
 {
   id:'2',
   title: 'Garage',
-     icon: 'ios-help-circle-outline',
-  // icon: 'account',
+  icon: 'motorcycle',
   route: 'Garage'
 },
 {
   id:'3',
   title: 'HistoryList',
-     icon: 'ios-help-circle-outline',
-   //icon: 'history',
+  icon: 'history',
   route: 'HistoryList'
 },
 {
   id:'4',
   title: 'Qrcode',
-     icon: 'ios-help-circle-outline',
-  //icon: 'qrcode',
+  icon: 'qrcode',
   route: 'Qrcode'
 },
 {
   id:'5',
   title: 'Help',
-   icon: 'ios-help-circle-outline',
+  icon: 'question-circle-o',
   route: 'Help'
 }]
 
@@ -73,7 +69,7 @@ export class ComponentsScreen extends React.Component {
         <RkButton rkType='square shadow' style={{width: size,height: size,backgroundColor: '#ffffff', marginLeft:paddingValue, marginBottom: paddingValue
          , flexDirection: 'column',justifyContent: 'space-between', alignItems: 'center'}}
         onPress={() => this.selectComponent(itemData)}>
-        <Ionicons name={itemData.icon} size={80} style={styles.icon}/>
+        <FontAwesome name={itemData.icon} size={80} style={styles.icon}/>
         <RkText style={styles.text}>{itemData.title}</RkText>
         </RkButton>
       )

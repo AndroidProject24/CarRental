@@ -12,7 +12,7 @@ import {
   RkTheme,
   RkAvoidKeyboard
 } from 'react-native-ui-kitten';
-import {GradientButton} from '../components/gradientButton';
+import { LinearGradient } from 'expo';
 import {scale, scaleModerate, scaleVertical} from '../utils/scale';
 
 export class SignUpScreen extends React.Component {
@@ -43,9 +43,23 @@ export class SignUpScreen extends React.Component {
             <RkTextInput rkType='rounded' placeholder='Email'/>
             <RkTextInput rkType='rounded' placeholder='Password' secureTextEntry={true}/>
             <RkTextInput rkType='rounded' placeholder='Confirm Password' secureTextEntry={true}/>
-            <RkButton style={styles.save} rkType='large' text='SIGN UP' onPress={() => {
-              this.props.navigation.goBack()
-            }}/>
+            <LinearGradient
+                      colors={['#ff9147', '#f24645', '#ff524c']}
+                      style={{ padding: 15, alignItems: 'center', borderRadius: 5 }}
+                      onPress={() =>
+                        this.props.navigation.navigate('Home')
+                      }>
+                      <RkText
+                        style={{
+                          backgroundColor: 'transparent',
+                          fontSize: 15,
+                          color: '#fff',
+                        }}onPress={() =>
+                          this.props.navigation.navigate('Home')
+                        }>
+                        SIGN UP
+                      </RkText>
+            </LinearGradient>
           </View>
           <View style={styles.footer}>
             <View style={styles.textRow}>
